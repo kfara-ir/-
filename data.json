@@ -1,0 +1,26 @@
+{
+  "userProfile": {
+    "name": "John Doe",
+    "age": 35,
+    "gender": "male",
+    "height": 175,
+    "weight": 75
+  },
+  "scanResults": {
+    "heartRate": 72,
+    "bloodPressure": "120/80",
+    "bodyFat": 18.5
+  },
+  "painAreas": [
+    {
+      "type": "muscle_pain",
+      "location": "upper_arm_left",
+      "severity": 7
+    },
+    {
+      "type": "joint_pain",
+      "location": "hand_right",
+      "severity": 5
+    }
+  ]
+}
