@@ -1,0 +1,37 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "userProfile": {
+      "type": "object",
+      "properties": {
+        "name": { "type": "string" },
+        "age": { "type": "number" },
+        "gender": { "type": "string", "enum": ["male", "female", "other"] },
+        "height": { "type": "number" },
+        "weight": { "type": "number" }
+      },
+      "required": ["name", "age", "gender", "height", "weight"]
+    },
+    "scanResults": {
+      "type": "object",
+      "properties": {
+        "heartRate": { "type": "number" },
+        "bloodPressure": { "type": "string" },
+        "bodyFat": { "type": "number" }
+      }
+    },
+    "painAreas": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "type": { "type": "string", "enum": ["muscle_pain", "joint_pain", "nerve_pain"] },
+          "location": { "type": "string", "enum": ["upper_arm_left", "lower_arm_left", "hand_left", "upper_arm_right", "lower_arm_right", "hand_right"] },
+          "severity": { "type": "number", "minimum": 1, "maximum": 10 }
+        },
+        "required": ["type", "location", "severity"]
+      }
+    }
+  }
+}
